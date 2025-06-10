@@ -21,10 +21,9 @@ public class OrderDtos {
             double totalPrice
     ) {}
 
-    // DTO para criar um pedido, agora usando o DTO de requisição
     public record CreateOrderDto(
-            List<CartItemRequestDto> items, // <-- CORREÇÃO APLICADA AQUI
-            Customer customer,
+            List<CartItemRequestDto> items,
+            // O campo 'customer' foi removido.
             String deliveryType,
             DeliveryAddress deliveryAddress,
             Payment payment,
